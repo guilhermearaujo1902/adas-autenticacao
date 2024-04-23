@@ -9,13 +9,18 @@ public class Main {
 		
 		UsuarioController controller = new UsuarioController();
 		
-		Usuario usuario = new Usuario();
-		usuario.setNome("Hermione");
-		usuario.setEmail("hermione@proway.com");
-		usuario.setSenha("Hermione123");
-		usuario.setIsAtivo(true);
+//		Usuario usuario = new Usuario();
+//		usuario.setNome("Harry");
+//		usuario.setEmail("harry@proway.com");
+//		usuario.setSenha("Harry123");
+//		usuario.setIsAtivo(true);
+//		
+//		controller.cadastrar(usuario);
 		
-		controller.cadastrar(usuario);
+		String email = "harry@proway.com";
+		String senha = "Harry123";
+		
+		controller.autenticar(email, senha);
 
 	}
 

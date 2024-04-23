@@ -106,5 +106,20 @@ public List<Usuario> listarTodos() {
 			return false;
 		}
 	}
+	
+	public void autenticar(String email, String senha) {
+		try {
+			UsuarioDAOImpl dao = new UsuarioDAOImpl();
+			
+			if ( dao.autenticar(email, senha) ) {
+				JOptionPane.showMessageDialog(null, "Usuário autenticado com sucesso!");
+			} else {
+				JOptionPane.showMessageDialog(null, "Email ou Senha estão inválidos!");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }
